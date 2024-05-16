@@ -1,0 +1,65 @@
+:root {
+	font-family: monospace;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+
+	color: #0f0f0f;
+	background-color: #f6f6f6;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+button {
+	border-radius: 0;
+	background-color: white;
+	border: 1px solid black;
+	padding: 0.5rem;
+	font-family: monospace;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: black;
+	color: white;
+}
+
+button:active {
+	animation: button-clicked 2s ease-in-out infinite;
+}
+
+@keyframes button-clicked {
+	0% {
+		background-color: black;
+		color: white;
+	}
+
+	100% {
+		background-color: white;
+		color: black;
+	}
+}
+
+/* New */
+
+h1,
+h2 {
+	width: 100%;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1rem;
+}
