@@ -1,8 +1,8 @@
 {
     "targets": [
         {
-            "target_name": "addon",
-            "sources": ["src-cpp/addon.cpp"],
+            "target_name": "addons",
+            "sources": ["src-cpp/addons.cpp"],
             "dependencies": [
                 "<!(node -p \"require('node-addon-api').targets\"):node_addon_api",
             ]
