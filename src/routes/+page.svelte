@@ -1,7 +1,15 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
+	import { onMount, set } from 'svelte'
+
+	let result = {}
 
 	onMount(() => {
+		window.functions.onResult((event, data) => {
+			console.log(event)
+			console.log(data)
+
+			result = data
+		})
 		const testButton = document.getElementById('test-btn')
 		testButton?.addEventListener('click', () => {
 			console.log('Will emit an event...')
@@ -28,6 +36,10 @@
 	</p>
 
 	<button id="test-btn">Test</button>
+
+	<div class="box">
+		{JSON.stringify(result)}
+	</div>
 </section>
 
 <style>
@@ -37,5 +49,15 @@
 		justify-content: center;
 		align-items: center;
 		flex: 0.6;
+	}
+
+	.box {
+		position: relative;
+		border: 1px solid black;
+		padding: 1rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		width: 100vh;
+		min-height: 5rem;
 	}
 </style>

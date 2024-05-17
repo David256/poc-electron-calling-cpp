@@ -8,5 +8,8 @@ contextBridge.exposeInMainWorld('functions', {
 		ipcRenderer.invoke('click')
 		ipcRenderer.send('touch')
 	},
+	onResult: (fn) => {
+		ipcRenderer.on('result', fn)
+	},
 	// we can also expose variables, not just functions
 })
