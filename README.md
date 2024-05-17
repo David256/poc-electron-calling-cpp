@@ -25,5 +25,14 @@ npm run dev
 To create a production version of your app:
 
 ```bash
-bun run build
+bun run build-cpp # the addons
+bun run build # the svelte app
+```
+
+## Dist
+
+```bash
+bun run app:dist # for Linux (I think)
+# or
+bun run app:dist:windows # for Windows
 ```
