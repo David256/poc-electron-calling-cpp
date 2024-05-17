@@ -1,4 +1,14 @@
-<script>
+<script lang="ts">
+	import { onMount } from 'svelte'
+
+	onMount(() => {
+		const testButton = document.getElementById('test-btn')
+		testButton?.addEventListener('click', () => {
+			console.log('Will emit an event...')
+
+			window.functions.click()
+		})
+	})
 </script>
 
 <svelte:head>
@@ -17,7 +27,7 @@
 		log message should be printed.
 	</p>
 
-	<button>Test</button>
+	<button id="test-btn">Test</button>
 </section>
 
 <style>
