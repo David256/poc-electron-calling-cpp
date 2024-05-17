@@ -1,6 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
-const addon = require('./build/Release/addon.node')
+const addon = require('./addons')
 
 app.whenReady().then(() => {
 	const mainWindow = new BrowserWindow({
